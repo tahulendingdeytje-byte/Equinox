@@ -1,0 +1,149 @@
+5. SOFTWARE REQUIREMENTS SPECIFICATION (SRS)
+
+5.1 Deskripsi Sistem
+
+Sistem Informasi Penyewaan Lapangan Badminton merupakan sistem yang dibuat untuk mempermudah pelanggan dalam melakukan pemesanan lapangan. Sistem ini juga membantu admin mengelola jadwal, data pelanggan, pembayaran, dan laporan penyewaan.
+
+Sistem ini memiliki 3 aktor utama:
+
+1. Pelanggan: Orang yang ingin menyewa lapangan badminton.
+2. Admin: Orang yang mengelola pemesanan, jadwal, dan pembayaran.
+3. Pemilik: Orang yang mengawasi kegiatan penyewaan dan melihat laporan.
+
+5.2 Kebutuhan Fungsional (Functional Requirements)
+
+Kebutuhan fungsional adalah fitur atau fungsi yang harus tersedia di dalam sistem.
+
+| ID     | Kebutuhan Fungsional                                                      |
+| ------ | ------------------------------------------------------------------------- |
+| REQ-01 | Sistem dapat menampilkan halaman login untuk admin dan pemilik.           |
+| REQ-02 | Sistem dapat menampilkan informasi lapangan badminton.                    |
+| REQ-03 | Sistem dapat menampilkan jadwal lapangan yang tersedia dan sudah dipesan. |
+| REQ-04 | Sistem dapat memungkinkan pelanggan melakukan pemesanan lapangan.         |
+| REQ-05 | Sistem dapat menyimpan data pemesanan pelanggan.                          |
+| REQ-06 | Sistem dapat menghitung total biaya penyewaan secara otomatis.            |
+| REQ-07 | Sistem dapat mencatat pembayaran pelanggan.                               |
+| REQ-08 | Sistem dapat mengubah status pembayaran menjadi lunas atau belum lunas.   |
+| REQ-09 | Sistem dapat memungkinkan admin mengelola jadwal penyewaan.               |
+| REQ-10 | Sistem dapat memungkinkan admin membatalkan pemesanan.                    |
+| REQ-11 | Sistem dapat menampilkan riwayat pemesanan pelanggan.                     |
+| REQ-12 | Sistem dapat membuat laporan penyewaan dan pembayaran.                    |
+| REQ-13 | Sistem dapat memungkinkan pemilik melihat laporan pendapatan.             |
+| REQ-14 | Sistem dapat menyimpan dan mengelola data pelanggan.                      |
+
+5.3 Kebutuhan Non-Fungsional (Non-Functional Requirements)
+
+Kebutuhan non-fungsional adalah standar kualitas atau kemampuan yang harus dimiliki oleh sistem.
+
+| ID     | Kebutuhan Non-Fungsional                                                                            |
+| ------ | --------------------------------------------------------------------------------------------------- |
+| NFR-01 | Sistem harus mudah digunakan dan memiliki tampilan sederhana.                                       |
+| NFR-02 | Sistem harus dapat diakses melalui browser pada komputer dan smartphone.                            |
+| NFR-03 | Sistem harus melindungi data akun dengan username dan password.                                     |
+| NFR-04 | Sistem harus dapat menampilkan informasi dengan cepat.                                              |
+| NFR-05 | Sistem harus menyimpan data pemesanan agar tidak mudah hilang.                                      |
+| NFR-06 | Sistem harus membatasi akses berdasarkan hak pengguna.                                              |
+| NFR-07 | Sistem harus dapat digunakan selama jam operasional penyewaan.                                      |
+| NFR-08 | Sistem harus memiliki fitur pencadangan (backup) data.                                              |
+| NFR-09 | Sistem harus menampilkan pesan apabila terjadi kesalahan saat pengguna memasukkan data.             |
+| NFR-10 | Sistem harus menjaga agar data pemesanan tidak dapat diubah oleh pengguna yang tidak memiliki izin. |
+
+5.4 Aturan Bisnis (Business Rules)
+
+Aturan bisnis adalah ketentuan yang harus dipatuhi oleh pengguna saat menggunakan sistem penyewaan lapangan badminton.
+
+| ID    | Aturan Bisnis                                                                        |
+| ----- | ------------------------------------------------------------------------------------ |
+| BR-01 | Pelanggan harus mengisi data pemesanan sebelum menyewa lapangan.                     |
+| BR-02 | Pelanggan hanya dapat memesan lapangan pada jadwal yang masih tersedia.              |
+| BR-03 | Satu lapangan tidak boleh dipesan oleh dua pelanggan pada tanggal dan jam yang sama. |
+| BR-04 | Harga sewa ditentukan berdasarkan tarif yang telah ditetapkan oleh pemilik.          |
+| BR-05 | Total biaya dihitung berdasarkan durasi penyewaan dikalikan harga sewa per jam.      |
+| BR-06 | Pelanggan harus melakukan pembayaran sesuai ketentuan yang berlaku.                  |
+| BR-07 | Pemesanan dinyatakan terkonfirmasi setelah memenuhi ketentuan pembayaran.            |
+| BR-08 | Pembatalan pemesanan harus dilakukan melalui admin.                                  |
+| BR-09 | Admin bertanggung jawab memeriksa dan mencatat pembayaran pelanggan.                 |
+| BR-10 | Pemilik memiliki hak untuk melihat laporan penyewaan dan pendapatan.                 |
+
+5.5 User Scenario untuk Setiap Aktor
+
+User Scenario adalah gambaran langkah-langkah yang dilakukan setiap pengguna ketika menggunakan sistem.
+
+A. User Scenario – Pelanggan
+
+Aktor: Pelanggan
+
+Tujuan: Melakukan penyewaan lapangan badminton.
+
+| Langkah | Aktivitas                                                |
+| ------- | -------------------------------------------------------- |
+| 1       | Pelanggan membuka sistem penyewaan.                      |
+| 2       | Pelanggan melihat informasi lapangan.                    |
+| 3       | Pelanggan memeriksa jadwal yang tersedia.                |
+| 4       | Pelanggan memilih tanggal dan jam penyewaan.             |
+| 5       | Pelanggan mengisi data pemesanan.                        |
+| 6       | Sistem menghitung total biaya sewa.                      |
+| 7       | Pelanggan melakukan pembayaran.                          |
+| 8       | Pelanggan menerima konfirmasi pemesanan.                 |
+| 9       | Pelanggan datang dan menggunakan lapangan sesuai jadwal. |
+
+Hasil: Pelanggan berhasil melakukan pemesanan lapangan badminton.
+
+B. User Scenario – Admin
+
+Aktor: Admin
+
+Tujuan: Mengelola proses penyewaan lapangan badminton.
+
+| Langkah | Aktivitas                                   |
+| ------- | ------------------------------------------- |
+| 1       | Admin membuka sistem.                       |
+| 2       | Admin memasukkan username dan password.     |
+| 3       | Sistem menampilkan halaman dashboard admin. |
+| 4       | Admin melihat data pemesanan pelanggan.     |
+| 5       | Admin memeriksa jadwal lapangan.            |
+| 6       | Admin mengonfirmasi pembayaran pelanggan.   |
+| 7       | Admin memperbarui status pemesanan.         |
+| 8       | Admin mengelola pembatalan jika diperlukan. |
+| 9       | Admin membuat laporan penyewaan.            |
+
+Hasil: Data penyewaan dan pembayaran berhasil dikelola.
+
+C. User Scenario – Pemilik
+
+Aktor: Pemilik
+
+Tujuan: Memantau kegiatan penyewaan dan pendapatan lapangan badminton.
+
+| Langkah | Aktivitas                                 |
+| ------- | ----------------------------------------- |
+| 1       | Pemilik membuka sistem.                   |
+| 2       | Pemilik memasukkan username dan password. |
+| 3       | Sistem menampilkan dashboard pemilik.     |
+| 4       | Pemilik melihat jumlah penyewaan.         |
+| 5       | Pemilik melihat laporan pembayaran.       |
+| 6       | Pemilik memeriksa total pendapatan.       |
+| 7       | Pemilik mengevaluasi hasil penyewaan.     |
+
+Hasil: Pemilik dapat mengetahui jumlah penyewaan dan pendapatan usaha.
+
+5.6 Ringkasan Hak Akses Aktor
+
+| Fitur Sistem               | Pelanggan | Admin | Pemilik |
+| -------------------------- | --------- | ----- | ------- |
+| Melihat informasi lapangan | ✓         | ✓     | ✓       |
+| Melihat jadwal             | ✓         | ✓     | ✓       |
+| Melakukan pemesanan        | ✓         | ✓     | -       |
+| Mengelola pemesanan        | -         | ✓     | -       |
+| Mengelola pembayaran       | -         | ✓     | -       |
+| Membatalkan pemesanan      | -         | ✓     | -       |
+| Melihat laporan            | -         | ✓     | ✓       |
+| Melihat pendapatan         | -         | ✓     | ✓       |
+| Mengelola data lapangan    | -         | ✓     | -       |
+
+5.7 Kesimpulan SRS
+
+Berdasarkan kebutuhan sistem yang telah dijelaskan, Sistem Informasi Penyewaan Lapangan Badminton dirancang untuk membantu pelanggan melakukan pemesanan dengan mudah serta membantu admin dalam mengelola jadwal, pembayaran, dan data penyewaan.
+
+Sistem juga memberikan kemudahan kepada pemilik untuk memantau laporan dan pendapatan. Dengan adanya sistem ini, diharapkan proses penyewaan menjadi lebih teratur, cepat, dan mengurangi kesalahan pencatatan maupun jadwal bentrok.
+
